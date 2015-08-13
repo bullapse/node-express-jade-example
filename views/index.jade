@@ -20,3 +20,13 @@ block sidebar
     p
       | Vivamus hendrerit arcu sed erat molestie
       | vehicula.
+block eventTable
+    div
+      table
+        thead
+          tr: th Posts
+        tbody
+          each event, i in allEvents
+            tr
+              td 
+                a(href='http:localhost:8080/event/v1') #{event._id} - #{post.location}
